@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignIn.UI.Android", "SignIn.UI.Android\SignIn.UI.Android.csproj", "{8868962D-4E66-467E-B577-25556FB34620}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignIn.Core", "SignIn.Core\SignIn.Core.csproj", "{F767997A-A689-41F7-97E6-915B2D2F4C52}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8868962D-4E66-467E-B577-25556FB34620}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8868962D-4E66-467E-B577-25556FB34620}.Debug|x86.Build.0 = Debug|Any CPU
+		{8868962D-4E66-467E-B577-25556FB34620}.Release|x86.ActiveCfg = Release|Any CPU
+		{8868962D-4E66-467E-B577-25556FB34620}.Release|x86.Build.0 = Release|Any CPU
+		{F767997A-A689-41F7-97E6-915B2D2F4C52}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F767997A-A689-41F7-97E6-915B2D2F4C52}.Debug|x86.Build.0 = Debug|Any CPU
+		{F767997A-A689-41F7-97E6-915B2D2F4C52}.Release|x86.ActiveCfg = Release|Any CPU
+		{F767997A-A689-41F7-97E6-915B2D2F4C52}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = SignIn.UI.Android\SignIn.UI.Android.csproj
+	EndGlobalSection
+EndGlobal

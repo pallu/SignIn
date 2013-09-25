@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TableLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tableEventDetail"
+        android:layout_marginBottom="1dp">
+        <TableRow
+            android:id="@+id/tableRow1">
+            <TextView
+                android:text="Medium Text"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_column="0"
+                android:id="@+id/textLSC" />
+            <TextView
+                android:text="Medium Text"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_column="1"
+                android:id="@+id/textEventTitle"
+                android:layout_span="3" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:minWidth="25px"
+            android:minHeight="25px">
+            <TextView
+                android:text="Rep:"
+                android:layout_column="0"
+                android:id="@+id/textRepLabel"
+                android:textStyle="bold" />
+            <TextView
+                android:text="Text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textRep" />
+            <TextView
+                android:text="Speaker:"
+                android:id="@+id/textSpeakerLabel"
+                android:textStyle="bold" />
+            <TextView
+                android:text="Text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textSpeaker" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow3">
+            <TextView
+                android:text="Date:"
+                android:layout_column="0"
+                android:id="@+id/textDateLabel"
+                android:textStyle="bold" />
+            <TextView
+                android:text="Text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textDate" />
+            <TextView
+                android:text="Venue:"
+                android:id="@+id/textVenueLabel"
+                android:textStyle="bold" />
+            <TextView
+                android:text="Text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textVenue" />
+        </TableRow>
+    </TableLayout>
+    <ListView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listViewAttendees"
+        android:overScrollMode="ifContentScrolls" />
+</LinearLayout>
