@@ -50,14 +50,17 @@ namespace SignIn.UI.Android
 			view.FindViewById<TextView> (Android.Resource.Id.textFullName).Text = persons[position].FullName;
 			view.FindViewById<TextView> (Android.Resource.Id.textAttendeeType).Text = persons [position].AttendeeType;
 			CheckBox chkBox = view.FindViewById<CheckBox> (Android.Resource.Id.checkBoxAttended);
-			chkBox.SetTag(Android.Resource.String.CHK_ATTENDEEID, persons [position].AttendeeID);
+			//chkBox.SetTag(Android.Resource.String.CHK_ATTENDEEID, persons [position].AttendeeID);
+			chkBox.SetTag (Android.Resource.String.CHK_POSITION, position);
 			chkBox.Checked = persons [position].Attended;
 			chkBox.Click += (object sender, EventArgs e) => {
 				CheckBox cb = sender as CheckBox;
 				if(cb!=null)
 				{
-			
-					new EventRepository().SaveEventPerson(Convert.ToInt32(cb.GetTag(Android.Resource.String.CHK_ATTENDEEID)),cb.Checked);
+					EventPerson per = persons[Convert.ToInt32(cb.GetTag(Android.Resource.String.CHK_POSITION))];
+					per.Attended = cb.Checked;
+					//new EventRepository().SaveEventPerson(Convert.ToInt32(cb.GetTag(Android.Resource.String.CHK_ATTENDEEID)),cb.Checked);
+					new EventRepository().SaveEventPerson(per);
 				}
 			};
 

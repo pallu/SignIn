@@ -90,15 +90,25 @@ namespace SignIn.Core
 		{
 			return db.Table<ProjectEvent> ().Where (e => e.EventID == EventID).FirstOrDefault ();
 		}
-		public bool SaveEventPerson(int AttendeeID,bool attended)
+		//public bool SaveEventPerson(int AttendeeID,bool attended)
+		//{
+		//	EventPerson ePerson = db.Table<EventPerson> ().Where (ep => ep.AttendeeID == AttendeeID).FirstOrDefault();
+		//	if (ePerson != null) {
+		//		ePerson.Attended = attended;
+		//		db.InsertOrReplace (ePerson);
+		//		return true;
+		//	} else
+		//		return false;
+		//}
+		public bool SaveEventPerson(EventPerson person)
 		{
-			EventPerson ePerson = db.Table<EventPerson> ().Where (ep => ep.AttendeeID == AttendeeID).FirstOrDefault();
-			if (ePerson != null) {
-				ePerson.Attended = attended;
-				db.InsertOrReplace (ePerson);
+			try{
+				db.InsertOrReplace (person);
 				return true;
-			} else
+			}
+			catch {
 				return false;
+			}
 		}
 	}
 }
