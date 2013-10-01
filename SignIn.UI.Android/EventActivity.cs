@@ -15,6 +15,8 @@ namespace SignIn.UI.Android
 		EventActivityAdapter adapter;
 		ListView eventListView = null;
 
+		bool doubleBackToExitPressedOnce = false;
+
 		//int count = 1;
 		EventRepository repo;
 		protected override void OnCreate (Bundle bundle)
@@ -47,6 +49,26 @@ namespace SignIn.UI.Android
 			adapter = new EventActivityAdapter (this, repo.GetEvents ());
 			eventListView.Adapter = adapter;
 		}
+
+		//DO THIS IN FULL VERSION
+		/*
+		public override void OnBackPressed ()
+		{
+
+
+			//base.OnBackPressed ();
+			if (doubleBackToExitPressedOnce) {
+				base.OnBackPressed ();
+				return;
+			}
+			this.doubleBackToExitPressedOnce = true;
+			Toast.MakeText (this.BaseContext, "Double tap to exit", ToastLength.Long).Show();
+			new Handler ().PostDelayed (() =>
+			                          doubleBackToExitPressedOnce = false,
+			                          2000);
+			                         
+		}
+		*/
 	}
 
 }
