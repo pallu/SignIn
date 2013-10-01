@@ -53,10 +53,14 @@ namespace SignIn.UI.Android
 			//chkBox.SetTag(Android.Resource.String.CHK_ATTENDEEID, persons [position].AttendeeID);
 			chkBox.SetTag (Android.Resource.String.CHK_POSITION, position);
 			chkBox.Checked = persons [position].Attended;
-			chkBox.Click += (object sender, EventArgs e) => {
+			chkBox.Click += (object sender, EventArgs e) => 
+			//chkBox.CheckedChange += (object sender, CompoundButton.CheckedChangeEventArgs e) => 
+			{
+
 				CheckBox cb = sender as CheckBox;
 				if(cb!=null)
 				{
+					//Toast.MakeText(this.context,cb.Checked.ToString(),ToastLength.Short);
 					EventPerson per = persons[Convert.ToInt32(cb.GetTag(Android.Resource.String.CHK_POSITION))];
 					per.Attended = cb.Checked;
 					//new EventRepository().SaveEventPerson(Convert.ToInt32(cb.GetTag(Android.Resource.String.CHK_ATTENDEEID)),cb.Checked);
